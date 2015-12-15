@@ -95,7 +95,7 @@ public class Dataset {
 	 * @param str string contains doc
 	 * @param idx index in the document array
 	 */
-	public void setDoc(String str, int idx,  Vector<Integer> index, String rate, String author, String originalStr,  ArrayList<String> lines){
+	public void setDoc(String str, int idx,  Vector<Integer> index,  String author, String originalStr,  ArrayList<String> lines){
              
 		if (0 <= idx && idx < M){
 			String [] words = str.split("[ \\t\\n]");
@@ -136,7 +136,7 @@ public class Dataset {
                         }
             originalStr = null;
             //System.out.println(index);
-			Document doc = new Document(ids, str, index, rate,  author,  originalStr, lines);
+			Document doc = new Document(ids, str, index,  author,  originalStr, lines);
 			docs[idx] = doc;
 
 			V = localDict.word2id.size();
@@ -224,7 +224,7 @@ public class Dataset {
 			Dataset data = readDataSet(reader);
             File file = new File(filename);
             String dir = filename.substring(0,filename.indexOf(file.getName()));
-			data.readParadigmAspectList(dir+"aspectsdic.txt");
+//			data.readParadigmAspectList(dir+"aspectsdic.txt");
             reader.close();
 			return data;
 		}
@@ -303,7 +303,6 @@ public class Dataset {
                     }
 
                     if (line.startsWith("<rating")){
-                        rate = line;
                         break;
                     }
 
@@ -317,7 +316,7 @@ public class Dataset {
                     index.add( str.length  );
                     lines.add(line);
                 }
-                data.setDoc(sb.toString(), i, index, rate, author, originalStr.toString(), lines);
+                data.setDoc(sb.toString(), i, index,  author, originalStr.toString(), lines);
                 index.clear();
 
 			}
@@ -370,8 +369,7 @@ public class Dataset {
                         continue;
                     }
 
-                    if (line.startsWith("<rating")){
-                        rate = line;
+                    if (line.startsWith("<docend")){
                         break;
                     }
 
@@ -400,7 +398,7 @@ public class Dataset {
 
 
 
-                data.setDoc(sb.toString(), i, index, rate, author, originalStr.toString(),lines);
+                data.setDoc(sb.toString(), i, index,  author, originalStr.toString(),lines);
 //              data.setDocPreDict(sb.toString(), i, index, rate, author, originalStr.toString());
                 index.clear();
 			}
