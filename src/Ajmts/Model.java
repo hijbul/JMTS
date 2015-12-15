@@ -5,7 +5,12 @@
  * 	Md. Hijbul Alam
  *	hijbul@korea.ac.kr or hijbul@gmail.com
  * 	Dept. of Computer Science
- * 	Korea University University
+ * 	Korea University
+ *
+ * 	SangKeun Lee
+ *	yalphy@korea.ac.kr
+ * 	Dept. of Computer Science
+ * 	Korea University
  *
  *
  * JMTS is a free software; you can redistribute it and/or modify

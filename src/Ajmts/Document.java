@@ -2,11 +2,16 @@
 /*
  * Copyright (C) 2015 by
  *
+ *
  * 	Md. Hijbul Alam
  *	hijbul@korea.ac.kr or hijbul@gmail.com
  * 	Dept. of Computer Science
- * 	Korea University University
+ * 	Korea University
  *
+ * 	SangKeun Lee
+ *	yalphy@korea.ac.kr
+ * 	Dept. of Computer Science
+ * 	Korea University
  *
  * JMTS is a free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -52,7 +57,6 @@ public class Document {
     public int length;
     public int numberoflines;
     public int window;
-    public String rate;
     public String  author;
     public String originalStr;
     public Vector<Integer> indexofLine = new Vector<Integer>();
@@ -64,13 +68,13 @@ public class Document {
 
 
 
-    public Document(Vector<Integer> doc, String rawStr,  Vector<Integer> indexofLine, String rate, String author, String originalStr,  ArrayList<String> lines){
+    public Document(Vector<Integer> doc, String rawStr,  Vector<Integer> indexofLine,  String author, String originalStr,  ArrayList<String> lines){
 
         this.length = doc.size();
         this.rawStr = rawStr;
         this.words = new int[length];
         this.sentence = new int[length];
-        this.rate = rate;
+
         this.author = author;
         this.originalStr = originalStr;
         this.words = new int[length];
