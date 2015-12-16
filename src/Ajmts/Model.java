@@ -1182,7 +1182,7 @@ public class Model {
         // alpha, beta: from command line or default values
         // niters, savestep: from command line or default values
 
-        data.readParadigmAspectList("aspectsdic.txt");
+//        data.readParadigmAspectList("aspectsdic.txt");
         this.allocateMemoryIntializeZero();
         this.initiliazieWithRandomValues();;
 

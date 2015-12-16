@@ -307,7 +307,7 @@ public class Dataset {
                         continue;
                     }
 
-                    if (line.startsWith("<rating")){
+                    if (line.startsWith("<docend")){
                         break;
                     }
 

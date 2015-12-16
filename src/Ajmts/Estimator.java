@@ -133,7 +133,7 @@ public class Estimator {
         filename = split[0];
         computePi();
         computeSentenceSenti();
-        computePiLocSentence();
+//        computePiLocSentence();
         computeOverallSentiLocSentence();
         trnModel.saveModel(filename);
 

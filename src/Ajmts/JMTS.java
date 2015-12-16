@@ -48,25 +48,39 @@ public class JMTS {
         System.out.println(option.dir);
         int dataset = 0;
 
-        for (int run = 0; run < 1; ++run){
+//        for (int run = 0; run < 1; ++run)
+        {
 
-            System.out.println("run "+ run);
+//            System.out.println("run "+ run);
             try{
                 if (args.length == 0){
                     showHelp(parser);
                     return;
                 }
                 parser.parseArgument(args);
-                String tmp = option.dir;
+//                String tmp = option.dir;
 //                option.dfile = option.dfile +"-"+dataset+".txt";
-                String tmp1 =  tmp + "/" + option.dfile+"-/";
-                Setup.createDir(tmp1);
+
+
+//                String extension = "";
+//
+//                int i =  option.dfile.lastIndexOf('.');
+//                String fname = option.dfile;
+//                if (i > 0) {
+//                    extension =  option.dfile.substring(i+1);
+//                    fname = option.dfile.substring(0, i);
+//                }
+//                else fname = fname+"-";
+//                String tmp1 =  tmp + "/" + fname +"/";
+//
+
+//                Setup.createDir(tmp1);
 
                 System.out.println("run"+" "+option.glK+" "+option.locK);
 
-                option.dir=tmp1+"/"+Integer.toString(run);
-                Setup.createDir(option.dir);
-                Setup.fileCopy(tmp+"/"+option.dfile, option.dir+"/"+option.dfile);
+//                option.dir=tmp1+"/"+Integer.toString(run);
+//                Setup.createDir(option.dir);
+//                Setup.fileCopy(tmp+"/"+option.dfile, option.dir+"/"+option.dfile);
 
                 if (option.est || option.estc){
                     Estimator estimate = new Estimator();
