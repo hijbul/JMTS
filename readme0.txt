@@ -51,6 +51,10 @@ New options have been added:
 -nloc: Number of local topics
 
 
+Outputfile description:
+jmts.piCombine : Sentiment distribution for review sentiment classification
+[inputfilename.csv] all topics in csv file
+
 
 Contact
 
